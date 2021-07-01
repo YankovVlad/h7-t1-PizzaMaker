@@ -115,6 +115,23 @@ code {
 .editor__button--true {
   background: url('/src/svg/check-mark.svg') no-repeat center;
 }
+
+.editor__warning {
+  text-align: center;
+  font-weight: 600;
+  color: red;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.warning-hidden {
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+
+
 .ingredient{
   position: absolute;
   top: 0;

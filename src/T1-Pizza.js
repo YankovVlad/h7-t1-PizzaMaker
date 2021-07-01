@@ -100,6 +100,7 @@ class Pizza extends React.Component {
                         {this.state.stateChildCucumber ? <Bg ingredient='ingredient cucumber'/> : ''}
                     </div>
                     <ul className="pizza__editor">
+                        <p className={this.state.counter >= 6 ? 'editor__warning' : 'editor__warning warning-hidden'}>{'You can only choose 5 ingredients'}</p>
                         <EditorItem label='Cheese' updateData={this.updateCheese}/>
                         <EditorItem label='Peperoni' updateData={this.updatePepperoni} />
                         <EditorItem label='Jalapeno' updateData={this.updateJalapeno} />
