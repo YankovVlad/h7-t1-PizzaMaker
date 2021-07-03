@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Pizza from './T1-Pizza'
+import Pizza from './Pizza'
 
 
 

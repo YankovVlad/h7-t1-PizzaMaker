@@ -80,6 +80,8 @@ code {
   -webkit-backdrop-filter: blur( 6.5px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  
 }
 .editor__text {
   margin-left: 15px;
@@ -163,6 +165,17 @@ code {
   background-position: 10% 10%;
 }
 
-.disable {
+.button-disabled {
   opacity: 0.3;
+}
+.text-disable {
+  opacity: 0.3;
+}
+.item-disabled {
+  background: rgba( 255, 8, 8, 0.30 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.0px );
+  -webkit-backdrop-filter: blur( 7.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
