@@ -26,6 +26,9 @@ class Pizza extends React.Component {
 
         stateChildCucumber: false,
         isBlockCucumber: false,
+
+        stateChildBacon: false,
+        isBlockBacon: false,
     }
 
     updateCheese = (value) => {
@@ -53,17 +56,22 @@ class Pizza extends React.Component {
         this.setState({counter: this.state.stateChildCucumber ? this.state.counter - 1 : this.state.counter + 1}) 
     }
 
+    updateBacon = (value) => {
+        this.setState({stateChildBacon:value})
+        this.setState({counter: this.state.stateChildBacon ? this.state.counter - 1 : this.state.counter + 1}) 
+    }
+
     veg = [
         {
             id: 1,
             label: 'Cheese',
             class: 'ingredient cheese',
-            isBlock: this.state.isBlockCheese,
+            isBlock: !this.state.stateChildCheese,
             update: (value) => {
                 this.setState({stateChildCheese:value})
                 this.setState({counter: this.state.stateChildCheese ? this.state.counter - 1 : this.state.counter + 1}
                 )
-                this.setState({isBlockCheese: !this.state.isBlockCheese})  
+                
             },
         },
     
@@ -71,11 +79,11 @@ class Pizza extends React.Component {
             id: 2,
             label: 'Pepperoni',
             class: 'ingredient pepperoni',
-            isBlock:this.state.isBlockPepperoni,
+            isBlock: !this.state.stateChildPepperoni,
             update: (value) => {
                 this.setState({stateChildPepperoni:value})
                 this.setState({counter: this.state.stateChildPepperoni ? this.state.counter - 1 : this.state.counter + 1})
-                this.setState({isBlockPepperoni: !this.state.isBlockPepperoni})
+                
             },
             
         },
@@ -84,11 +92,11 @@ class Pizza extends React.Component {
             id: 3,
             label: 'Jalapeno',
             class: 'ingredient jalapeno',
-            isBlock:this.state.isBlockJalapeno,
+            isBlock: !this.state.stateChildJalapeno,
             update: (value) => {
                 this.setState({stateChildJalapeno:value})
                 this.setState({counter: this.state.stateChildJalapeno ? this.state.counter - 1 : this.state.counter + 1})
-                this.setState({isBlockJalapeno: !this.state.isBlockJalapeno})
+                
             }
             
         },
@@ -97,11 +105,11 @@ class Pizza extends React.Component {
             id: 4,
             label: 'Pineapple',
             class: 'ingredient pineapple',
-            isBlock:this.state.isBlockPineapple,
+            isBlock: !this.state.stateChildPineapple,
             update: (value) => {
                 this.setState({stateChildPineapple:value})
                 this.setState({counter: this.state.stateChildPineapple ? this.state.counter - 1 : this.state.counter + 1})
-                this.setState({isBlockPineapple: !this.state.isBlockPineapple})
+                
             }
             
         },
@@ -110,11 +118,11 @@ class Pizza extends React.Component {
             id: 5,
             label: 'Onion',
             class: 'ingredient onion',
-            isBlock: this.state.isBlockOnion,
+            isBlock: !this.state.stateChildOnion,
             update: (value) => {
                 this.setState({stateChildOnion:value})
                 this.setState({counter: this.state.stateChildOnion ? this.state.counter - 1 : this.state.counter + 1})
-                this.setState({isBlockOnion: !this.state.isBlockOnion})
+                
             }
             
         },
@@ -123,11 +131,11 @@ class Pizza extends React.Component {
             id: 6,
             label: 'Cucumber',
             class: 'ingredient cucumber',
-            isBlock: this.state.isBlockCucumber,
+            isBlock: !this.state.stateChildCucumber,
             update: (value) => {
                 this.setState({stateChildCucumber:value})
                 this.setState({counter: this.state.stateChildCucumber ? this.state.counter - 1 : this.state.counter + 1})
-                this.setState({isBlockCucumber: !this.state.isBlockCucumber}) 
+                 
             },
             
         }
@@ -153,6 +161,7 @@ class Pizza extends React.Component {
                         {this.state.stateChildPineapple ? <BgPizza ingredient='ingredient pineapple'/> : ''}
                         {this.state.stateChildOnion ? <BgPizza ingredient='ingredient onion'/> : ''}
                         {this.state.stateChildCucumber ? <BgPizza ingredient='ingredient cucumber'/> : ''}
+                        {this.state.stateChildBacon ? <BgPizza ingredient='ingredient bacon'/> : ''}
                     </div>
                     <ul className="pizza__editor">
                         <p className={this.state.counter >= this.state.choiseLimit ? 'editor__warning' : 'editor__warning warning-hidden'}>{'You can select up to 5 items'}</p>
@@ -192,6 +201,11 @@ class Pizza extends React.Component {
                             <EditorItemDisable label='Cucumber'/> 
                             ) : (
                             <EditorItem label='Cucumber' updateData={this.updateCucumber}/>)}
+
+                        {!this.state.stateChildCucumber && this.state.counter >= this.state.choiseLimit ? (
+                            <EditorItemDisable label='Bacon'/> 
+                            ) : (
+                            <EditorItem label='Bacon' updateData={this.updateBacon}/>)}
 
                         
                         

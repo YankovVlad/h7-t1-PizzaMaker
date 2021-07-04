@@ -14,7 +14,7 @@ class EditorItem extends React.Component {
     render () {
         
         return (  
-            <li className="editor__item"  key={this.props.key}> <span className="editor__text">{this.props.label}</span>
+            <li className={this.state.choisen ? "editor__item item-default" : "editor__item item-active"}  key={this.props.key}> <span className="editor__text">{this.props.label}</span>
                 <button disabled={this.props.disabled} 
                         className={this.state.choisen ? 'editor__button editor__button--false' : 'editor__button editor__button--true'} 
                         onClick={this.onClickChoise}>
