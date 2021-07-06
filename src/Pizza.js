@@ -10,25 +10,25 @@ class Pizza extends React.Component {
         counter: 0,
 
         stateChildCheese: false,
-        isBlockCheese: false,
+        isBlockCheese: true,
         
         stateChildPepperoni: false,
-        isBlockPepperoni: false,
+        isBlockPepperoni: true,
         
         stateChildJalapeno: false,
-        isBlockJalapeno: false,
+        isBlockJalapeno: true,
 
         stateChildPineapple: false,
-        isBlockPineapple: false,
+        isBlockPineapple: true,
         
         stateChildOnion: false,
-        isBlockOnion: false,
+        isBlockOnion: true,
 
         stateChildCucumber: false,
-        isBlockCucumber: false,
+        isBlockCucumber: true,
 
         stateChildBacon: false,
-        isBlockBacon: false,
+        isBlockBacon: true,
     }
 
     updateCheese = (value) => {
@@ -71,6 +71,7 @@ class Pizza extends React.Component {
                 this.setState({stateChildCheese:value})
                 this.setState({counter: this.state.stateChildCheese ? this.state.counter - 1 : this.state.counter + 1}
                 )
+                this.setState({isBlock: !this.state.isBlockCheese})
                 
             },
         },
@@ -83,7 +84,7 @@ class Pizza extends React.Component {
             update: (value) => {
                 this.setState({stateChildPepperoni:value})
                 this.setState({counter: this.state.stateChildPepperoni ? this.state.counter - 1 : this.state.counter + 1})
-                
+                this.setState({isBlock: !this.state.isBlockPepperoni})
             },
             
         },
@@ -96,7 +97,7 @@ class Pizza extends React.Component {
             update: (value) => {
                 this.setState({stateChildJalapeno:value})
                 this.setState({counter: this.state.stateChildJalapeno ? this.state.counter - 1 : this.state.counter + 1})
-                
+                this.setState({isBlock: !this.state.isBlockJalapeno})
             }
             
         },
@@ -109,7 +110,7 @@ class Pizza extends React.Component {
             update: (value) => {
                 this.setState({stateChildPineapple:value})
                 this.setState({counter: this.state.stateChildPineapple ? this.state.counter - 1 : this.state.counter + 1})
-                
+                this.setState({isBlock: !this.state.isBlockPineapple})
             }
             
         },
@@ -122,7 +123,7 @@ class Pizza extends React.Component {
             update: (value) => {
                 this.setState({stateChildOnion:value})
                 this.setState({counter: this.state.stateChildOnion ? this.state.counter - 1 : this.state.counter + 1})
-                
+                this.setState({isBlock: !this.state.isBlockOnion})
             }
             
         },
@@ -135,7 +136,20 @@ class Pizza extends React.Component {
             update: (value) => {
                 this.setState({stateChildCucumber:value})
                 this.setState({counter: this.state.stateChildCucumber ? this.state.counter - 1 : this.state.counter + 1})
-                 
+                this.setState({isBlock: !this.state.isBlockCucumber})
+            },
+            
+        },
+        {
+            id: 7,
+            label: 'Bacon',
+            class: 'ingredient bacon',
+            isBlock: !this.state.stateChildBacon,
+            update: (value) => {
+                this.setState({stateChildBacon:value})
+                this.setState({counter: this.state.stateChildBacon ? this.state.counter - 1 : this.state.counter + 1})
+                this.setState({isBlock: !this.state.isBlockBacon})
+              
             },
             
         }
@@ -202,7 +216,7 @@ class Pizza extends React.Component {
                             ) : (
                             <EditorItem label='Cucumber' updateData={this.updateCucumber}/>)}
 
-                        {!this.state.stateChildCucumber && this.state.counter >= this.state.choiseLimit ? (
+                        {!this.state.stateChildBacon && this.state.counter >= this.state.choiseLimit ? (
                             <EditorItemDisable label='Bacon'/> 
                             ) : (
                             <EditorItem label='Bacon' updateData={this.updateBacon}/>)}
