@@ -145,6 +145,7 @@ code {
 }
 .cheese {
   background: url('/src/svg/cheese.svg');
+  
 }
 .peperoni {
   background: url('/src/svg/pepperoni.svg');
