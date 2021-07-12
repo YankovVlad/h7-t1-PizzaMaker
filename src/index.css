@@ -140,9 +140,9 @@ code {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-
-  
+  opacity: 1;
 }
+
 .cheese {
   background: url('/src/svg/cheese.svg');
   
@@ -181,6 +181,7 @@ code {
   -webkit-backdrop-filter: blur( 7.0px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+  opacity: 0.6;
 }
 .item-active {
   background: rgba(66, 255, 8, 0.3);

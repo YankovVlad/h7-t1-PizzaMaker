@@ -1,8 +1,12 @@
 import React from 'react'
 
-export const BgPizza = ({ingredient}) => {
 
-    return (
-        <div className={ingredient}></div>
-    )
+export class BgPizza extends React.Component {
+
+    render () {
+       
+        return (
+            <div className={this.props.ingredient}></div>
+        )
+    }
 }
