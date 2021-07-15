@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Pizza from './Pizza'
 
+import { App } from './App'
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-      <Pizza />
+     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

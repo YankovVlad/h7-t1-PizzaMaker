@@ -148,7 +148,7 @@ class Pizza extends React.Component {
     
                     </div>
                     <ul className="pizza__editor">
-                        <p className={this.state.counter >= this.state.choiseLimit ? 'editor__warning' : 'editor__warning warning-hidden'}>{'You can select up to 5 items'}</p>
+                        <p className={this.state.counter >= this.state.choiseLimit ? 'warning' : 'warning warning-hidden'}>{'You can select up to 5 items'}</p>
 
                         {this.veg.map((elem) => {
                             return <EditorItem key={elem.id} id={elem.id} ingredient={elem} updateData={elem.update} disable={this.state.counter >= 5 ? true : false}/>
