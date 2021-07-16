@@ -1,4 +1,4 @@
-import './Modal.css'
+import '../style/Modal.css'
 import axios from 'axios'
 import { useState } from 'react'
 export const LoginWindow = (props) => {
@@ -7,11 +7,10 @@ export const LoginWindow = (props) => {
     const [tel, setTel] = useState('')
     const [password, setPassword] = useState('')
     const [activeModal, setActiveModal] = useState(props.isActive)
-    const [resPost, setRestPost] = useState(true)
+    const [resPost, setResultPost] = useState(true)
 
     const update = (value, userData) => {
         props.updateApp(value, userData)
-
     }
     const updateClose = (value) => {
         props.updateClose(value)
@@ -27,8 +26,8 @@ export const LoginWindow = (props) => {
                     update(value, userData)
                 },
                 rej => {
-                    setRestPost(false)
-                    setTimeout(() => setRestPost(true), 3000)
+                    setResultPost(false)
+                    setTimeout(() => setResultPost(true), 3000)
                     
                 }
             )

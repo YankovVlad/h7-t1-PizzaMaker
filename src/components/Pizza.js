@@ -1,7 +1,6 @@
+import '../style/Pizza.css'
 import React from 'react'
-
 import EditorItem from './Editor-item'
-
 import { BgPizza } from './Bg'
 
 
