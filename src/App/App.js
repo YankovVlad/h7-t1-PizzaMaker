@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import Pizza from "./Pizza"
-import { Navbar } from "./Navbar"
-import { LoginWindow } from './LoginWindow'
+import './style.css'
+import Pizza from "../PizzaEditor/Pizza"
+import { Navbar } from "../Navbar/Navbar"
+import { LoginWindow } from '../LoginWindow/LoginWindow'
 
 
 

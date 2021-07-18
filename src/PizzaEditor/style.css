@@ -116,6 +116,7 @@
   }
   
   .warning {
+    height: 40px;
     text-align: center;
     font-weight: 600;
     color: red;
@@ -124,6 +125,8 @@
   }
   
   .warning-hidden {
+    height: 40px;
+    text-align: center;
     opacity: 0;
     transition: all 0.7s ease;
     

@@ -1,4 +1,4 @@
-import '../style/Pizza.css'
+import './style.css'
 import React from 'react'
 import EditorItem from './Editor-item'
 import { BgPizza } from './Bg'

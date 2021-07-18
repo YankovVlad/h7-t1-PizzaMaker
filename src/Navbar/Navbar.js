@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../style/Navbar.css'
+import './style.css'
 
 import { NavbarBtn } from './NavbarBtn'
 
