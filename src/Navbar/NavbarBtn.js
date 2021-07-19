@@ -7,7 +7,8 @@ export const NavbarBtn = (props) => {
 
     useEffect(() => {
         setIsLogin(props.isLogin)
-    })
+        console.log(2)
+    }, [props.isLogin])
 
     const onClickButtonLogin = () => {
         const active = true
