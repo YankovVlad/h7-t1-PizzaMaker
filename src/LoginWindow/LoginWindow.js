@@ -75,7 +75,7 @@ export const LoginWindow = (props) => {
                 <button className={'btn modal__btn'} onClick={onClickButtonCancel}>Cancel</button>
                 <p className={'modal__help'}>Test autorization:</p>
                 <p className={'modal__help'} >Number: <span onClick={onClickCopy} className={'modal__help copy-btn'}>{testUser.tel}</span>  </p>
-                <p className={'modal__help copy-btn'} onClick={onClickCopy}>Password: <span onClick={onClickCopy} className={'modal__help copy-btn'}>{testUser.password}</span></p>
+                <p className={'modal__help '} onClick={onClickCopy}>Password: <span onClick={onClickCopy} className={'modal__help copy-btn'}>{testUser.password}</span></p>
                 
 
             </div>

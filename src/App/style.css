@@ -3,8 +3,8 @@
 }
 .loader {
   position: relative;
-  width: 30%;
-  height: 20px;
+  width: 50%;
+  height: 30px;
 
   margin-bottom: 10px;
 
@@ -18,43 +18,46 @@
   content: '';
 
 
-  width: 16px;
-  height: 16px;
+  width:30px;
+  height: 30px;
 
   border-radius: 50%;
   
 }
 .item-first {
-  top: calc(50% - 8px);
+  top: calc(50% - 15px);
   left: 0;
-  background-color: #F48E0E;
-  animation: loader 1s ease-in-out infinite;
+  background: url(../svg/pizza-loader.svg) no-repeat center;
+  animation: loader 1.5s ease-in-out infinite;
 }
 .item-second {
-  top: calc(50% - 8px);
+  top: calc(50% - 15px);
   right: 0;
-  background-color: #c2710efb;
-  animation: loader-revers 1s ease-in-out infinite;
+  background: url(../svg/pizza-loader2.svg) no-repeat center;
+  animation: loader-revers 1.5s ease-in-out infinite;
 }
+
+
 
 @keyframes loader {
   0% {left: 0;}
   25% {transform: scale(0.7); z-index: 100;}
-  50% {left: calc(100% - 16px); transform: scale(1);}
+  50% {left: calc(100% - 30px); transform: scale(1);}
   75% {transform: scale(1.3); z-index: 200;}   
   100% {left: 0; transform: scaleZ(1);}
 }
 @keyframes loader-revers {
   0% {right: 0;}
   25% {transform: scale(1.3); z-index: 200;}
-  50% {right: calc(100% - 16px); transform: scale(1);}
+  50% {right: calc(100% - 30px); transform: scale(1);}
   75% {transform: scale(0.7); z-index: 100;}   
   100% {right: 0; transform: scaleZ(1);}
  }
 
+
  .loader-placeholder {
-  width: 30%;
-  height: 20px;
+  width: 50%;
+  height: 30px;
   margin-bottom: 10px;
  }
 
