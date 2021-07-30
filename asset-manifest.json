@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/h7-t1-pizza-maker/static/css/main.82a19958.chunk.css",
+    "main.js": "/h7-t1-pizza-maker/static/js/main.867723ad.chunk.js",
+    "main.js.map": "/h7-t1-pizza-maker/static/js/main.867723ad.chunk.js.map",
+    "runtime-main.js": "/h7-t1-pizza-maker/static/js/runtime-main.24b61d11.js",
+    "runtime-main.js.map": "/h7-t1-pizza-maker/static/js/runtime-main.24b61d11.js.map",
+    "static/js/2.ea9cc228.chunk.js": "/h7-t1-pizza-maker/static/js/2.ea9cc228.chunk.js",
+    "static/js/2.ea9cc228.chunk.js.map": "/h7-t1-pizza-maker/static/js/2.ea9cc228.chunk.js.map",
+    "index.html": "/h7-t1-pizza-maker/index.html",
+    "static/css/main.82a19958.chunk.css.map": "/h7-t1-pizza-maker/static/css/main.82a19958.chunk.css.map",
+    "static/js/2.ea9cc228.chunk.js.LICENSE.txt": "/h7-t1-pizza-maker/static/js/2.ea9cc228.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/h7-t1-pizza-maker/static/media/pizza.92ae45ae.svg",
+    "static/media/index.css": "/h7-t1-pizza-maker/static/media/mainBg.d3b96c81.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24b61d11.js",
+    "static/js/2.ea9cc228.chunk.js",
+    "static/css/main.82a19958.chunk.css",
+    "static/js/main.867723ad.chunk.js"
+  ]
+}
